@@ -1,0 +1,30 @@
+
+
+<div class="container">
+  <h2 class="mb-5 mt-4 lead-5">COCKTAILS</h2>
+
+  <div class="row d-flex flex-row">
+    <!-- <div class="col-12 bg-dark"> -->
+    <% @cocktails.each do |cocktail| %>
+      <%= link_to cocktail_path(cocktail) do %>
+        <div class="btn btn-warning mb-3 ml-3 "><%= cocktail.name %>
+        </div>
+      <% end %>
+    <!-- </div> -->
+    <% end %>
+  </div>
+  <!-- <div class="btn btn-primary font-italic pl-3 pr-3">
+
+    Add a cocktail <%= link_to new_cocktail_path %> </div> -->
+
+  <%= link_to new_cocktail_path do  %>
+  <div class="btn btn-primary"><i class="fas fa-plus-circle pr-2"></i>Add a cocktail</div>
+  <% end %>
+
+
+</div>
+
+<br>
+
+
+
